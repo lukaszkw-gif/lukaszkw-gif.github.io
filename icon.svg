@@ -1,0 +1,34 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="512" height="512" viewBox="0 0 512 512">
+  <defs>
+    <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#0f2a5c"/>
+      <stop offset="0.45" stop-color="#3f74c9"/>
+      <stop offset="0.72" stop-color="#f0994e"/>
+      <stop offset="1" stop-color="#f7c66b"/>
+    </linearGradient>
+    <radialGradient id="sunGlow" cx="0.5" cy="0.5" r="0.5">
+      <stop offset="0" stop-color="#fff2c2"/>
+      <stop offset="0.55" stop-color="#ffd66b"/>
+      <stop offset="1" stop-color="#ffb84d"/>
+    </radialGradient>
+    <clipPath id="round"><rect x="0" y="0" width="512" height="512" rx="112" ry="112"/></clipPath>
+  </defs>
+  <g clip-path="url(#round)">
+    <rect x="0" y="0" width="512" height="512" fill="url(#sky)"/>
+    <!-- soft sun halo -->
+    <circle cx="256" cy="330" r="150" fill="#ffd66b" opacity="0.28"/>
+    <!-- rays -->
+    <g stroke="#ffe9a8" stroke-width="14" stroke-linecap="round" opacity="0.9">
+      <line x1="256" y1="150" x2="256" y2="196"/>
+      <line x1="146" y1="196" x2="178" y2="228"/>
+      <line x1="366" y1="196" x2="334" y2="228"/>
+      <line x1="96" y1="312" x2="140" y2="312"/>
+      <line x1="416" y1="312" x2="372" y2="312"/>
+    </g>
+    <!-- sun disc -->
+    <circle cx="256" cy="330" r="92" fill="url(#sunGlow)"/>
+    <!-- horizon line -->
+    <rect x="0" y="392" width="512" height="10" fill="#ffffff" opacity="0.55"/>
+    <rect x="0" y="416" width="512" height="6" fill="#ffffff" opacity="0.32"/>
+  </g>
+</svg>
